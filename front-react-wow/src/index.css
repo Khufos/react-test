@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#fff;
+}
+
+
+ul{
+  list-style:none;
+
+}
+a{
+  text-decoration:none;
+  color:#fff;
+}
+
+
+body {
+  background-position-x: left;
+  background-position-y: top;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(19, 21, 23);
+  margin: 0;
+  background-image: url(https://www.warcrafttavern.com/wp-content/themes/warcrafttavern/i/bgtile.png);
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

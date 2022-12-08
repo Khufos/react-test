@@ -1,0 +1,21 @@
+.navbar{
+    background-image: url("/img/nav.png");
+    height: 55px;
+    background-repeat: round;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+}
+
+
+.navbar h2 a {
+    opacity:1;
+    margin:2rem; 
+}
+
+.navbar ul{
+    display:flex;
+    gap:1rem;
+
+}

@@ -1,0 +1,19 @@
+.SidebarNav{
+    background-image: url("/img/navbar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    position:fixed;
+    transition: 350ms;
+    z-index: 10;
+
+}
+
+
+.SidebaWrap{
+    width:100%;
+}
+
