@@ -1,0 +1,19 @@
+.profile_skills{
+    background:rgb(110, 166, 218);
+    border-radius:10px;
+    width: 442px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 2px rgb(86, 107, 174);
+    position: relative;
+    background: url(/logo/equipamento.png) no-repeat;
+ 
+  }
+ 
+ 
+ 
+ .item-slot {
+    height: 54px;
+    width: 60px;
+    margin: 1px 0 0px 0;
+    position: relative;
+ }

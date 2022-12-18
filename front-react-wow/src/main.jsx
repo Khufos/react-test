@@ -6,6 +6,8 @@ import './index.css'
 import { createBrowserRouter , RouterProvider, Route} from 'react-router-dom';
 import Home from './router/Home';
 import Classes from './router/Classes';
+import Dashboard from './components/dashboard/Dashboard';
+import Armory from './router/Armory';
 
 const router = createBrowserRouter([
 
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
      {
       path:"/classes/:classe",
       element:<Classes/>
+     },
+     {
+      path:"/classes/:classe/:nome",
+      element:<Armory/>
      },
     ],
   },

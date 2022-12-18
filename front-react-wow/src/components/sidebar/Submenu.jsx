@@ -1,68 +1,29 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-const SidebarLink = styled(Link)`
-    display:flex;
-    color:#e1e9fc;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    list-styles:none;
-    height:20px;
-    text-decoration:none;
-    font-size:12px;
-    &:hover{
-        background: #252831;
-        border-left: 4px solid #63ce4;
-        cursor:pointer;
-    }`;
-const SidebarLabel = styled.span`
-    margin-left: 30px;
-`;
-
-const DropdownLink = styled(Link)`
-background: #020202;
-height:40px;
-padding-left:3rem;
-display:flex;
-align-items:center;
-text-decoration: none;
-color:#f5f5f5;
-font-size:12px;
-&:hover{
-    background:#214241;
-    border-left:4px solid #632ce4;
-    cursor:pointer;
-}
-`;
 
 
 const Submenu = ({item}) => {
 const [subnav, setSubnav] = useState(false);
 const showSubnav = () => setSubnav(!subnav);
   return (
-    <>
-    <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
-
-        <div>
-            {item.icon}
-            <SidebarLabel>{item.title}</SidebarLabel>
-        </div>
-        <div>
+    <section>
+    <li to={item.path} onClick={item.subNav && showSubnav}  className="text-gray-300 text-sm flex items-center gap-x-4 p-2 cursor-pointer hover:bg-light-white rounded-md mt-2 ">
+        {item.icon}
+        <span className='text-base font-medium flex-1'>{item.title}</span>
+        <div className='text-2xl block float-left'>
         {item.subNav && subnav ? item.iconOpened : item.subNav ? item.iconClosed : null }
         </div>
-    </SidebarLink>
-    {subnav && item.subNav.map((item,index) =>{
-            return(
-                <DropdownLink to={item.path} key={index}>
-                    {item.icon}
-                    <SidebarLabel>{item.title}</SidebarLabel>
-                </DropdownLink>
-            )
-        })}
+    </li>
+        {subnav && item.subNav.map((item,index) =>{
+                return(
+                    <Link to={item.path} key={index} className="text-gray-300 text-sm flex items-center gap-x-4 p-2 cursor-pointer hover:bg-light-white rounded-md mt-2 ">
+                        {item.icon}
+                        <span className='text-base font-medium flex-1'>{item.title}</span>
+                    </Link>
+                )
+            })}
     
-    </>
+    </section>
   )
 }
 

@@ -3,15 +3,17 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
+import { RiDatabaseFill } from 'react-icons/ri';
 
 
 export const SidebarData = [
     {
       title: "Classe",
       path:"#",
-      icon: <IoIcons.IoMdPeople />,
+      icon: <RiDatabaseFill/>,
       iconClosed: <RiIcons.RiArrowDownSFill />,
       iconOpened: <RiIcons.RiArrowUpSFill />,
+      submenu:true,
       subNav: [
         {
           title: "Death Knigth Guides",
@@ -21,56 +23,57 @@ export const SidebarData = [
         {
           title: "Druida Guides",
           path: "/classes/Druid",
-          icon: <img src={"/icones/druid.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/druid.png" } alt="druid" width="12px" height="12px"/>,
         },
         {
           title: "Hunter Guides",
           path: "/classes",
-          icon: <img src={"/icones/hunter.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/hunter.png" } alt="hunter" width="12px" height="12px"/>,
         },
         {
           title: "Mage Guides",
           path: "/classes",
-          icon: <img src={"/icones/mage.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/mage.png" } alt="mage" width="12px" height="12px"/>,
         },
         {
           title: "Paladino Guides",
           path: "/classes",
-          icon: <img src={"/icones/paladin.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/paladin.png" } alt="Paladino" width="12px" height="12px"/>,
         },
         {
           title: "Priest Guides",
           path: "/classes",
-          icon: <img src={"/icones/priest.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/priest.png" } alt="Priest" width="12px" height="12px"/>,
         },
         {
           title: "Rogue Guides",
           path: "/classes",
-          icon: <img src={"/icones/rogue.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/rogue.png" } alt="Rogue" width="12px" height="12px"/>,
         },
         {
           title: "Shaman Guides",
           path: "/classes",
-          icon: <img src={"/icones/shaman.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/shaman.png" } alt="Shaman" width="12px" height="12px"/>,
         },
         {
           title: "Warlock Guides",
           path: "/classes",
-          icon: <img src={"/icones/warlock.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/warlock.png" } alt="Warlock" width="12px" height="12px"/>,
         },
         {
           title: "Warrior Guides",
           path: "/classes",
-          icon: <img src={"/icones/warrior.png" } alt="dk" width="12px" height="12px"/>,
+          icon: <img src={"/icones/warrior.png" } alt="Warrior" width="12px" height="12px"/>,
         },
       ],
     },
     {
       title: "Profissions",
       path: "#",
-      icon: <AiIcons.AiFillHome />,
+      icon: <RiDatabaseFill/>,
       iconClosed: <RiIcons.RiArrowDownSFill />,
       iconOpened: <RiIcons.RiArrowUpSFill />,
+      submenu:true,
       subNav: [
         {
           title: "reports",
@@ -92,18 +95,18 @@ export const SidebarData = [
     {
       title: "Addons",
       path: "#",
-      icon: <FaIcons.FaCartPlus />,
+      icon: <RiDatabaseFill/>,
     },
     {
       title: "Team",
       path: "/team",
-      icon: <IoIcons.IoMdPeople />,
+      icon: <RiDatabaseFill/>,
     },
     {
       title: "Messages",
       path: "/messages",
-      icon: <FaIcons.FaEnvelopeOpenText />,
-  
+      icon: <RiDatabaseFill/>,
+      submenu:true,
       iconClosed: <RiIcons.RiArrowDownSFill />,
       iconOpened: <RiIcons.RiArrowUpSFill />,
   
@@ -123,6 +126,7 @@ export const SidebarData = [
     {
       title: "Support",
       path: "/support",
+
       icon: <IoIcons.IoMdHelpCircle />,
     },
   ];

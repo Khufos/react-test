@@ -15,7 +15,6 @@ export async function AllUser() {
     return rows
 }
 
-
 export async function IdUser(id){
     const [rows] = await pool.query(`SELECT * FROM info_character WHERE id= ? `,[id])
     return rows[0]
@@ -25,11 +24,18 @@ export async function UserClasse(classe){
     return rows
 }
 
+export async function UserName(nome){
+    const [rows] = await pool.query(`SELECT id,info.nome, info.classe, info.talents, info.modalidade, info.build, info.damage, info.capa,
+    h.item_head, h.item_ench, h.gem_one , h.gem_two, h.gem_three, h.screen_head FROM info_character info INNER JOIN head as h
+    on info.id = h.fk_h where nome= ?`,[nome])
+    return rows
+}
+
 export async function CreateUser(nome,raca,classe,talents,modalidade,build,damage){
     const result = await pool.query(`INSERT INTO info_character (nome,raca,classe,talents,modalidade,build,damage)
     VALUES(?,?,?,?,?,?,?)`,[nome,raca,classe,talents,modalidade,build,damage])
     const id = result.insertId
     return IdUser(id)
 }
-//const notes = await UserClasse("Death Knight")                                                                                                                                                            
+//const notes = await UserName("Tarumack")                                                                                                                                                            
 //console.log(notes)

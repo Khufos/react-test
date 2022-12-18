@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+.wrapper{
+    font-family: 'Montserrat', sans-serif;
+    width: 650px;
+    height: auto;
+    position: absolute;
+    display: flex;
+ }
+ .wrapper .profile{
+    width: 442px;
+    margin-right: 25px;
+ }
+
+ .wrapper .profile .profile_img_info{
+    display: flex;
+    background:rgb(110, 166, 218);
+    border-radius:10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgb(86, 107, 174);
+ }
+ .wrapper .profile .profile_img_info .img{
+    width: 125px;
+ }
+
+ .wrapper .profile .profile_img_info .img img{
+    display: block;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+ }
+ .wrapper .profile .profile_img_info .info{
+   padding-left: 20px;
+ }
+ .wrapper .profile .profile_img_info .info p.name{
+    font-size: 24px;
+    
+ }
+
+ .wrapper .profile .profile_skills{
+   background:rgb(110, 166, 218);
+   border-radius:10px;
+   width: 442px;
+   margin-bottom: 25px;
+   box-shadow: 0 1px 2px rgb(86, 107, 174);
+   position: relative;
+   background: url(/logo/equipamento.png) no-repeat;
+
+ }
+
+
+
+.item-slot {
+   height: 54px;
+   width: 60px;
+   margin: 1px 0 0px 0;
+   position: relative;
+}

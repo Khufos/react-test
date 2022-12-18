@@ -1,14 +1,5 @@
 .container{
-    max-width:1000px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding-left:20px;
-    
+    max-width: 700rem;
+    margin: 1rem auto;
+    padding: 2rem 2rem;
 }
-p{
-   margin:4px;
-}
-  

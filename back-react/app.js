@@ -13,7 +13,7 @@ app.use(
 app.use(express.json())
 
 
-import { AllUser, IdUser, CreateUser, UserClasse } from './database.js'
+import { AllUser, IdUser, CreateUser, UserClasse, UserName } from './database.js'
 
 app.get("/user",async (req, res)=>{
     const users = await AllUser()
@@ -30,6 +30,12 @@ app.get("/classe/:classe", async (req,res)=>{
     const classe = req.params.classe
     const userClasse = await UserClasse(classe)
     res.send(userClasse)
+})
+
+app.get("/classe/:classe/:nome", async (req,res)=>{
+    const nome = req.params.nome
+    const userName = await UserName(nome)
+    res.send(userName)
 })
 
 app.post("/CreateUser", async(req, res)=>{
